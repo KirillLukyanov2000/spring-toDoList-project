@@ -1,3 +1,23 @@
 
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+^
+.src/main/java/ru/javarush/lukyanov/entity.java,1\e\1ea1536b13ccf47fcaac49d02f35f33690fe2c72
+[
++src/main/java/ru/javarush/lukyanov/App.java,0\4\04748175a84e5ac9c0fd70e0219dcbe7c4e0309c
+c
+3src/main/java/ru/javarush/lukyanov/entity/Task.java,8\b\8bbaa1d201cabbf5b61262f261273ef13be7172d
+d
+4src/main/java/ru/javarush/lukyanov/enums/Status.java,9\7\97a966745e86b3141ec16d9d725a093cbcfe86ba
+h
+8src/main/java/ru/javarush/lukyanov/config/AppConfig.java,9\7\978407ab5368c845e9354de7d4498105dd095eef
+h
+8src/main/java/ru/javarush/lukyanov/config/WebConfig.java,6\9\690ed97388f9c5ac5d26b6bde4c5ab6e66a3affa
+c
+3src/main/java/ru/javarush/lukyanov/dao/TaskDAO.java,2\d\2df8a162880c9ace2acc6259c7fb3f2d6006cdf0
+k
+;src/main/java/ru/javarush/lukyanov/service/TaskService.java,0\7\0743cbcdcb3fb785995572f7b9079c1d6c70ce58
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
