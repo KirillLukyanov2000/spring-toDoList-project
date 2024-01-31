@@ -7,18 +7,37 @@ import ru.javarush.lukyanov.dao.TaskDAO;
 import ru.javarush.lukyanov.entity.Task;
 
 import java.util.List;
+
 @Service
 @Transactional(readOnly = true)
 public class TaskService {
 
     private final TaskDAO taskDAO;
+
     @Autowired
     public TaskService(TaskDAO taskDAO) {
         this.taskDAO = taskDAO;
     }
 
-    public List<Task> findAll(){
+    public List<Task> findAllTasks() {
         List<Task> all = taskDAO.findAll();
         return all;
+    }
+
+    @Transactional
+    public Task createTask(Task task) {
+        taskDAO.save(task);
+        return task;
+    }
+
+    @Transactional
+    public Task updateTask(Task task) {
+        taskDAO.updateTask(task.getDescription(), task.getStatus(), task.getId());
+        return task;
+    }
+
+    @Transactional
+    public void delete(Long id) {
+        taskDAO.deleteById(id);
     }
 }

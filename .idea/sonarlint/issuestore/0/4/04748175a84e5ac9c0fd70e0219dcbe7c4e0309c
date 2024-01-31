@@ -1,4 +1,7 @@
 
 b
-java:S1612"@Replace this lambda with method reference 'System.out::println'.(·èë«ÿÿÿÿÿ8õÏÖÕ1
-L	java:S106"+Replace this use of System.out by a logger.(·èë«ÿÿÿÿÿ8©»ËÖÕ1
+java:S1612"@Replace this lambda with method reference 'System.out::println'.(·èë«ÿÿÿÿÿ8º›ÒòÕ1
+L	java:S106"+Replace this use of System.out by a logger.(·èë«ÿÿÿÿÿ8»›ÒòÕ1
+]
+java:S1612""@Replace this lambda with method reference 'System.out::println'.(ì×âé8¡ÍÒòÕ1
+G	java:S106""+Replace this use of System.out by a logger.(ì×âé8¢ÍÒòÕ1
