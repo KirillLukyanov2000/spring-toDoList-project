@@ -16,22 +16,24 @@ public class App {
         ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
         TaskService taskService = context.getBean(TaskService.class);
 
-        Task newTask = new Task();
-        newTask.setDescription("My Description");
-        newTask.setStatus(Status.IN_PROGRESS);
-        taskService.createTask(newTask);
-        newTask.setDescription("REV DESCR");
-        newTask.setStatus(Status.DONE);
 
-        taskService.updateTask(newTask);
+        taskService.createTask("My Description",Status.IN_PROGRESS );
 
-        List<Task> all = taskService.findAllTasks();
+        List<Task> all = taskService.findAllTasks(0,30);
         all.forEach(task -> System.out.println(task));
 
-        taskService.delete(19L);
 
-        List<Task> allNew = taskService.findAllTasks();
+        taskService.updateTask(24, "REV DESCR111", Status.DONE);
+
+        List<Task> allRev = taskService.findAllTasks(0,30);
+        allRev.forEach(task -> System.out.println(task));
+
+        //taskService.delete(29);
+
+        List<Task> allNew = taskService.findAllTasks(0,30);
         allNew.forEach(task -> System.out.println(task));
+
+        System.out.println(taskService.getAllCount());
 
     }
 }

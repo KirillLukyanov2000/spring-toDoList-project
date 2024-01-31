@@ -28,13 +28,11 @@ public class AppConfig implements WebMvcConfigurer {
 
     @Bean
     public SpringResourceTemplateResolver templateResolver(
-            @Value("${spring.mvc.view.prefix}") String prefix,
-            @Value("${spring.mvc.view.suffix}") String suffix
     ) {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(applicationContext);
-        templateResolver.setPrefix(prefix);
-        templateResolver.setSuffix(suffix);
+        templateResolver.setPrefix("/WEB-INF/views/html/");
+        templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCacheable(false);
         return templateResolver;
@@ -43,7 +41,7 @@ public class AppConfig implements WebMvcConfigurer {
     @Bean
     public SpringTemplateEngine templateEngine() {
         SpringTemplateEngine templateEngine = new SpringTemplateEngine();
-        templateEngine.setTemplateResolver(templateResolver("spring.mvc.view.prefix", "spring.mvc.view.suffix"));
+        templateEngine.setTemplateResolver(templateResolver());
         templateEngine.setEnableSpringELCompiler(true);
         return templateEngine;
     }

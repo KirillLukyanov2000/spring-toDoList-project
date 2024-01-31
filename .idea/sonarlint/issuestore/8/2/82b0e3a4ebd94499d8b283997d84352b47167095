@@ -1,3 +1,14 @@
 
-£
-java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(æ¬Üòÿÿÿÿÿ8â¿®óÕ1
+b	java:S1122"FDefine and throw a dedicated exception instead of using a generic one.(ÃÐÀ‚8Ä¤žÿÕ1
+b	java:S112:"FDefine and throw a dedicated exception instead of using a generic one.(ÃÐÀ‚8Ç¤žÿÕ1
+X	java:S125"<This block of commented-out lines of code should be removed.(¬å’º8ï¤žÿÕ1
+Z
+java:S1854,"8Remove this useless assignment to local variable "task".(ý¸–žÿÿÿÿÿ8ñ¤žÿÕ1
+K
+java:S1481,")Remove this unused "task" local variable.(ý¸–žÿÿÿÿÿ8ò¤žÿÕ1
+Z
+java:S18544"8Remove this useless assignment to local variable "task".(§£Ú£ÿÿÿÿÿ8ó¤žÿÕ1
+K
+java:S14814")Remove this unused "task" local variable.(§£Ú£ÿÿÿÿÿ8õ¤žÿÕ1
+c
+java:S1128"ARemove this unused import 'org.springframework.data.domain.Page'.(˜âŽŽüÿÿÿÿ8÷¤žÿÕ1
