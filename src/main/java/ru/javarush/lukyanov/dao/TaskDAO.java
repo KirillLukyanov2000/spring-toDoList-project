@@ -14,7 +14,7 @@ public interface TaskDAO extends JpaRepository <Task, Long> {
     @Transactional
     @Modifying
     @Query("update Task t set t.description = ?1, t.status = ?2 where t.id = ?3")
-    public int updateTask(String description, Status status, Long id);
+    int updateTask(String description, Status status, Integer id);
 
 
 }

@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table
+@Table(schema="todo", name = "task")
 @ToString
 @Getter
 @Setter
@@ -16,7 +16,7 @@ import java.util.Objects;
 public class Task {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     @Column
     private String description;
     @Column(name = "status", columnDefinition = "tinyint")

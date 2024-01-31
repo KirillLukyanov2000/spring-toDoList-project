@@ -1,3 +1,7 @@
 
 }
-java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "all".(ƒíÖ¡ùÿÿÿÿ8¼ù–òÕ1
+java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "all".(ƒíÖ¡ùÿÿÿÿ8¼ù–òÕ1
+ƒ
+java:S1488"aImmediately return this expression instead of assigning it to the temporary variable "pageTasks".(Ïæµíÿÿÿÿÿ8“©óÕ1
+V
+java:S1128"4Remove this unused import 'java.awt.print.Pageable'.(¾Ğıøÿÿÿÿ8¨©óÕ1

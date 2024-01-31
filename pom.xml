@@ -4,7 +4,7 @@
   <groupId>ru.lukyanov</groupId>
   <artifactId>spring-toDoList-project</artifactId>
   <packaging>war</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
   <name>spring-toDoList-project Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <properties>
@@ -34,6 +34,11 @@
       <artifactId>spring-boot-starter-data-jpa</artifactId>
       <version>2.7.5</version>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-validation</artifactId>
+      <version>2.7.5</version>
+    </dependency>
         <dependency>
       <groupId>org.glassfish.jaxb</groupId>
       <artifactId>jaxb-runtime</artifactId>
@@ -50,7 +55,11 @@
       <artifactId>thymeleaf-spring5</artifactId>
       <version>3.0.11.RELEASE</version>
     </dependency>
-
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.14.1</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -59,7 +68,6 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.3.2</version>
       </plugin>
-
     </plugins>
     <finalName>spring-toDoList-project</finalName>
   </build>
