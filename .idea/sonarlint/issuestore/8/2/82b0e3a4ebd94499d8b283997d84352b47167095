@@ -1,14 +1,21 @@
 
-b	java:S1122"FDefine and throw a dedicated exception instead of using a generic one.(ÃÐÀ‚8Ä¤žÿÕ1
-b	java:S112:"FDefine and throw a dedicated exception instead of using a generic one.(ÃÐÀ‚8Ç¤žÿÕ1
-X	java:S125"<This block of commented-out lines of code should be removed.(¬å’º8ï¤žÿÕ1
+b	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(ÃÐÀ‚8ßçÛœÖ1
+b	java:S112<"FDefine and throw a dedicated exception instead of using a generic one.(ÃÐÀ‚8ßçÛœÖ1
+j
+java:S4488"HReplace "@RequestMapping(method = RequestMethod.GET)" with "@GetMapping"(ž–û‚ùÿÿÿÿ8õçÛœÖ1
+t
+java:S6204#"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ä÷õ¡ýÿÿÿÿ8øçÛœÖ1
 Z
-java:S1854,"8Remove this useless assignment to local variable "task".(ý¸–žÿÿÿÿÿ8ñ¤žÿÕ1
+java:S1854,"8Remove this useless assignment to local variable "task".(ý¸–žÿÿÿÿÿ8úçÛœÖ1
 K
-java:S1481,")Remove this unused "task" local variable.(ý¸–žÿÿÿÿÿ8ò¤žÿÕ1
+java:S1481,")Remove this unused "task" local variable.(ý¸–žÿÿÿÿÿ8úçÛœÖ1
 Z
-java:S18544"8Remove this useless assignment to local variable "task".(§£Ú£ÿÿÿÿÿ8ó¤žÿÕ1
+java:S18545"8Remove this useless assignment to local variable "task".(§£Ú£ÿÿÿÿÿ8ûçÛœÖ1
 K
-java:S14814")Remove this unused "task" local variable.(§£Ú£ÿÿÿÿÿ8õ¤žÿÕ1
+java:S14815")Remove this unused "task" local variable.(§£Ú£ÿÿÿÿÿ8ýçÛœÖ1
 c
-java:S1128"ARemove this unused import 'org.springframework.data.domain.Page'.(˜âŽŽüÿÿÿÿ8÷¤žÿÕ1
+java:S1128"ARemove this unused import 'org.springframework.data.domain.Page'.(˜âŽŽüÿÿÿÿ8ÿçÛœÖ1
+Z
+java:S1128"=Remove this unused import 'javax.validation.constraints.Max'.(þÉ½¦8ÿçÛœÖ1
+Z
+java:S1128"=Remove this unused import 'javax.validation.constraints.Min'.(ã¤Ž½8ÿçÛœÖ1

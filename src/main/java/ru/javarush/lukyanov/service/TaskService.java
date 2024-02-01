@@ -30,11 +30,6 @@ public class TaskService {
         return taskDAO.findAll();
     }
 
-    public Page<Task> findAllTasksPageable(Integer offset, Integer limit) {
-        Page<Task> pageTasks = taskDAO.findAll(PageRequest.of(offset, limit));
-        return pageTasks;
-    }
-
     public long getAllCount() {
         return taskDAO.count();
     }

@@ -31,7 +31,7 @@ public class AppConfig implements WebMvcConfigurer {
     ) {
         SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(applicationContext);
-        templateResolver.setPrefix("/WEB-INF/views/html/");
+        templateResolver.setPrefix("/html/");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode(TemplateMode.HTML);
         templateResolver.setCacheable(false);
@@ -48,14 +48,14 @@ public class AppConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("views/html/**").addResourceLocations("/html/");
-        registry.addResourceHandler("views/style/**").addResourceLocations("/style/");
-        registry.addResourceHandler("views/script/**").addResourceLocations("/script/");
+        registry.addResourceHandler("/html/**").addResourceLocations("/html/");
+        registry.addResourceHandler("/style/**").addResourceLocations("/style/");
+        registry.addResourceHandler("/script/**").addResourceLocations("/script/");
     }
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("/html/tasks");
+        registry.addViewController("/").setViewName("tasks");
     }
 
     @Override

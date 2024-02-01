@@ -11,6 +11,8 @@ import ru.javarush.lukyanov.service.TaskService;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static java.util.Objects.isNull;
 
@@ -21,35 +23,35 @@ public class TaskController {
 
     private final TaskService taskService;
 
-//    @GetMapping
-//    public Page<Task> getAllTasksPageable(
-//            @RequestParam(value = "offset", defaultValue = "0") @Min(0) Integer offset,
-//            @RequestParam(value = "limit", defaultValue = "10") @Min(1) @Max(100) Integer limit
-//    ) {
-//        return taskService.findAllTasksPageable(offset, limit);
-//    }
-
-    @GetMapping
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getAllTasks(Model model,
-                              @RequestParam(value = "page", required = false, defaultValue = "1") @Min(0) Integer page,
-                              @RequestParam(value = "limit", defaultValue = "10") @Min(1) @Max(100) Integer limit) {
+                              @RequestParam(value = "page", required = false, defaultValue = "1") int page,
+                              @RequestParam(value = "limit", required = false, defaultValue = "10")  int limit) {
         List<Task> tasks = taskService.findAllTasks((page - 1) * limit, limit);
         model.addAttribute("tasks", tasks);
-
-        return "/tasks";
+        model.addAttribute("current_page", page);
+        int totalPages = (int) Math.ceil(1.0 * taskService.getAllCount() / limit);
+        if (totalPages > 1) {
+            List<Integer> pageNumbers = IntStream.rangeClosed(1, totalPages).boxed().collect(Collectors.toList());
+            model.addAttribute("page_numbers", pageNumbers);
+        }
+        return "tasks";
     }
 
+
     @PostMapping
-    public void addNewTask(Model model, @RequestBody TaskInfo info) {
+    public String addNewTask(Model model, @RequestBody TaskInfo info) {
         Task task = taskService.createTask(info.getDescription(), info.getStatus());
+        return getAllTasks(model, 1, 10);
     }
 
     @PostMapping("/{id}")
-    public void editTask(Model model, @PathVariable(value = "id") Integer id, @RequestBody TaskInfo info) {
+    public String editTask(Model model, @PathVariable(value = "id") Integer id, @RequestBody TaskInfo info) {
         if (isNull(id) || id <= 0) {
             throw new RuntimeException("Wrong Id");
         }
         Task task = taskService.updateTask(id, info.getDescription(), info.getStatus());
+        return getAllTasks(model, 1, 10);
     }
 
     @DeleteMapping("/{id}")
@@ -58,6 +60,6 @@ public class TaskController {
             throw new RuntimeException("Wrong Id");
         }
         taskService.delete(id);
-        return "/html/tasks";
+        return getAllTasks(model, 1, 10);
     }
 }
