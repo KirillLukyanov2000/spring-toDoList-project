@@ -8,7 +8,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(schema="todo", name = "task")
+@Table(schema = "todo", name = "task")
 @ToString
 @Getter
 @Setter

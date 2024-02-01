@@ -1,8 +1,6 @@
 package ru.javarush.lukyanov.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import ru.javarush.lukyanov.dao.TaskDAO;
@@ -11,8 +9,6 @@ import ru.javarush.lukyanov.enums.Status;
 
 
 import java.util.List;
-
-import static java.util.Objects.isNull;
 
 @Service
 @Transactional(readOnly = true)
@@ -27,7 +23,7 @@ public class TaskService {
 
     public List<Task> findAllTasks(Integer offset, Integer limit) {
 
-        return taskDAO.findAll();
+        return taskDAO.findAllTasks(offset, limit);
     }
 
     public long getAllCount() {

@@ -1,15 +1,13 @@
 package ru.javarush.lukyanov.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.javarush.lukyanov.entity.Task;
 import ru.javarush.lukyanov.service.TaskService;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -26,7 +24,7 @@ public class TaskController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String getAllTasks(Model model,
                               @RequestParam(value = "page", required = false, defaultValue = "1") int page,
-                              @RequestParam(value = "limit", required = false, defaultValue = "10")  int limit) {
+                              @RequestParam(value = "limit", required = false, defaultValue = "10") int limit) {
         List<Task> tasks = taskService.findAllTasks((page - 1) * limit, limit);
         model.addAttribute("tasks", tasks);
         model.addAttribute("current_page", page);

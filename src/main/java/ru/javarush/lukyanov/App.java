@@ -14,26 +14,26 @@ import java.util.List;
 public class App {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
-        TaskService taskService = context.getBean(TaskService.class);
 
 
-        taskService.createTask("My Description",Status.IN_PROGRESS );
-
-        List<Task> all = taskService.findAllTasks(0,30);
-        all.forEach(task -> System.out.println(task));
-
-
-        taskService.updateTask(24, "REV DESCR111", Status.DONE);
-
-        List<Task> allRev = taskService.findAllTasks(0,30);
-        allRev.forEach(task -> System.out.println(task));
-
-        //taskService.delete(29);
-
-        List<Task> allNew = taskService.findAllTasks(0,30);
-        allNew.forEach(task -> System.out.println(task));
-
-        System.out.println(taskService.getAllCount());
+//        TaskService taskService = context.getBean(TaskService.class);
+//
+//        taskService.createTask("My Description", Status.IN_PROGRESS);
+//
+//        List<Task> all = taskService.findAllTasks(0, 30);
+//        all.forEach(task -> System.out.println(task));
+//
+//        taskService.updateTask(24, "REV DESCR111", Status.DONE);
+//
+//        List<Task> allRev = taskService.findAllTasks(0, 30);
+//        allRev.forEach(task -> System.out.println(task));
+//
+//        //taskService.delete(29);
+//
+//        List<Task> allNew = taskService.findAllTasks(0, 30);
+//        allNew.forEach(task -> System.out.println(task));
+//
+//        System.out.println(taskService.getAllCount());
 
     }
 }

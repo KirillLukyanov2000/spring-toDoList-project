@@ -3,13 +3,19 @@ td, th {
     border: solid;
     color: black;
 }
+
 .active_page {
     color: crimson;
 }
+
 .button_page {
     color: antiquewhite;
     border: 2px black;
     margin: 5px;
     padding: 20px;
     font-size: large;
+}
+
+h1, h2 {
+    color: green;
 }
